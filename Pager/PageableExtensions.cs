@@ -5,7 +5,6 @@ namespace Pager
 {
     public static class PageableExtensions
     {
-
         public static async Task<PageableResponse<T>> ToPageableListAsync<T>(this IQueryable<T> query, PageableRequest request, CancellationToken cancellationToken)
         {
             int totalRecords = await query.CountAsync(cancellationToken);
