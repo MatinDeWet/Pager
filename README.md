@@ -7,7 +7,7 @@
 Pager was designed to make it easy to paginate data in .NET applications making use of Entity Framework Core. It is a simple library that can be used to paginate any collection of data. It is designed to be easy to use and easy to extend.
 
 ## Usage
-To use Pager, you need to call the `Paginate` extension method on an `IQueryable<T>` object, you need to supply the method with a `PageableRequest` and `cancelation token`. This will return a `PagedResult<T>` object that contains the paginated data.
+To use Pager, you need to call the `Paginate` extension method on an `IQueryable<T>` object, you need to supply the method with a `PageableRequest` and `cancellation token`. This will return a `PagedResult<T>` object that contains the paginated data.
 
 ```C#
     var request = new PageableRequest
