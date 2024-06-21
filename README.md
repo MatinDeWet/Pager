@@ -44,6 +44,7 @@ The `SearchablePageableRequest` allows you to apply searchterms to your object. 
 	{
 		public string SearchTerms { get; set; }
 	}
+```
 ```C#
     var request = new ClientSearchablePageableDto : SearchablePageableRequest
     {
