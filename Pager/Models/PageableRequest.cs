@@ -1,6 +1,6 @@
 ﻿namespace Pager.Models
 {
-    public class PageableRequest
+    public abstract class PageableRequest
     {
         public int PageNumber { get; set; } = 1;
 

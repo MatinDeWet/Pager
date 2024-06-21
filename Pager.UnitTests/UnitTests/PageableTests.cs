@@ -1,5 +1,5 @@
-﻿using Pager.Models;
-using Pager.UnitTests.Context;
+﻿using Pager.UnitTests.Context;
+using Pager.UnitTests.Models;
 
 namespace Pager.UnitTests.UnitTests
 {
@@ -15,7 +15,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ReturnsPageableResponse()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 1,
                 PageSize = 10
@@ -32,7 +32,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFirstPageTenResults__ReturnsPageableResponseWithCorrectDataCount()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 1,
                 PageSize = 10
@@ -49,7 +49,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFirstPageTenResults__ReturnsPageableResponseWithCorrectTotalRecords()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 1,
                 PageSize = 10
@@ -66,7 +66,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFirstPageTenResults__ReturnsPageableResponseWithCorrectPageNumber()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 1,
                 PageSize = 10
@@ -83,7 +83,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFirstPageTenResults__ReturnsPageableResponseWithCorrectPageSize()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 1,
                 PageSize = 10
@@ -100,7 +100,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFirstPageTenResults__ReturnsPageableResponseWithCorrectPageCount()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 1,
                 PageSize = 10
@@ -117,7 +117,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForSecondPageTwentyResults__ReturnsPageableResponseWithCorrectDataCount()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 2,
                 PageSize = 20
@@ -134,7 +134,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForSecondPageTwentyResults__ReturnsPageableResponseWithCorrectTotalRecords()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 2,
                 PageSize = 20
@@ -151,7 +151,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForSecondPageTwentyResults__ReturnsPageableResponseWithCorrectPageNumber()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 2,
                 PageSize = 20
@@ -168,7 +168,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForSecondPageTwentyResults__ReturnsPageableResponseWithCorrectPageSize()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 2,
                 PageSize = 20
@@ -185,7 +185,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForSecondPageTwentyResults__ReturnsPageableResponseWithCorrectPageCount()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 2,
                 PageSize = 20
@@ -202,7 +202,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFirstPageThirtyResults__ReturnsPageableResponseWithCorrectDataCount()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 3,
                 PageSize = 30
@@ -219,7 +219,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFirstPageThirtyResults__ReturnsPageableResponseWithCorrectTotalRecords()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 3,
                 PageSize = 30
@@ -236,7 +236,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFirstPageThirtyResults__ReturnsPageableResponseWithCorrectPageNumber()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 3,
                 PageSize = 30
@@ -253,7 +253,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFirstPageThirtyResults__ReturnsPageableResponseWithCorrectPageSize()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 3,
                 PageSize = 30
@@ -270,7 +270,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFirstPageThirtyResults__ReturnsPageableResponseWithCorrectPageCount()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 3,
                 PageSize = 30
@@ -287,7 +287,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFithPageFiftyResults__ReturnsPageableResponseWithEmptyCollection()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 5,
                 PageSize = 50
@@ -304,7 +304,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFithPageFiftyResults__ReturnsPageableResponseWithCorrectTotalRecords()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 5,
                 PageSize = 50
@@ -321,7 +321,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFithPageFiftyResults__ReturnsPageableResponseWithCorrectPageNumber()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 5,
                 PageSize = 50
@@ -338,7 +338,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFithPageFiftyResults__ReturnsPageableResponseWithCorrectPageSize()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 5,
                 PageSize = 50
@@ -355,7 +355,7 @@ namespace Pager.UnitTests.UnitTests
         public async Task ToPageableListAsync__ForFithPageFiftyResults__ReturnsPageableResponseWithCorrectPageCount()
         {
             // Arrange
-            var request = new PageableRequest
+            var request = new ClientPageableDto
             {
                 PageNumber = 5,
                 PageSize = 50
